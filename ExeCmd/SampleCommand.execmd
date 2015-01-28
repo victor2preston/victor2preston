@@ -1,0 +1,9 @@
+echo Hello Folks
+
+wait 3000
+
+sms 781-640-1421 Steve is a loser!
+
+echo Goodbye cruel world
+
+detonate
