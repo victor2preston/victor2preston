@@ -176,13 +176,11 @@ void MainWindow::createCommandProcessor()
     mCommandProcessor = new QProcess;
 
     connect(mCommandProcessor,SIGNAL(readyRead()),this,SLOT(on_command_ready()));
-//    connect(mCommandProcessor,SIGNAL(stateChanged()),this,SLOT(on_command_results()));
     connect(mCommandProcessor,SIGNAL(error(QProcess::ProcessError)),this,SLOT(on_command_error()));
 }
 void MainWindow::deleteCommandProcessor()
 {
     disconnect(mCommandProcessor,SIGNAL(readyRead()),this,SLOT(on_command_ready()));
-//    disconnect(mCommandProcessor,SIGNAL(stateChanged),this,SLOT(on_command_results()));
     disconnect(mCommandProcessor,SIGNAL(error(QProcess::ProcessError)),this,SLOT(on_command_error()));
 
     delete mCommandProcessor;
